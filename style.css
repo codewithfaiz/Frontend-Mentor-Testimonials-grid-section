@@ -1,0 +1,198 @@
+/*==============================================================
+declear the variable
+================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+:root {
+    --Moderate_violet: hsl(263, 55%, 52%);
+    --Very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --Very-dark_blackish_blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(0, 0%, 81%);
+    --Light_grayish_blue: hsl(210, 46%, 95%);
+}
+
+/*==============================================================
+deafult 
+================================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 375px;
+    max-width: 1400px;
+    margin: auto;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/*==============================================================
+body
+================================================================*/
+
+body {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    min-height: 100vh;
+    background-color: var(--Light_grayish_blue);
+}
+
+/*==============================================================
+styling for mobile display 
+================================================================*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: aqua;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    color: var(--White);
+    font-weight: 600;
+}
+
+span {
+    font-size: 0.8em;
+    font-weight: 500;
+    opacity: 50%;
+}
+
+h3 {
+    
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 0.8em 0em;
+}
+
+p {
+    
+    font-weight: 500;
+    line-height: 1.3em;
+    font-size: 0.9em;
+    opacity: 70%;
+}
+/*==============================================================
+styling  the daniel conatiner (box 1)
+================================================================*/
+.box1 {
+    background-color: var(--Moderate_violet);
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 150px;
+}
+.box1 .profile img {
+    border-color:rgb(182, 121, 240);
+}
+.box1 .profile h2, .box1 h3, .box1 p {
+    color: var(--Light_grayish_blue);
+}
+/*==============================================================
+styling  the jonathan conatiner (box 2)
+================================================================*/
+.box2 {
+    background: var(--Very_dark_grayish_blue);
+}
+.box2 .profile h2, .box2 h3, .box2 p {
+    color: var(--Light_grayish_blue);
+}
+/*==============================================================
+styling  the jeanette conatiner (box 3)
+================================================================*/
+.box3 {
+    background: var(--White);
+}
+.box3 .profile h2, .box3  h3, .box3 p  {
+    color: var(--Very_dark_grayish_blue);
+}
+/*==============================================================
+styling  the Patrick conatiner (box 4)
+================================================================*/
+.box4{
+    background: var(--Very-dark_blackish_blue);
+}
+.box4 .profile h2, .box4 h3, .box4 p {
+    color: var(--Light_grayish_blue);
+}
+.box4 .profile img{
+    border-color:rgb(182, 121, 240) ;
+}
+/*==============================================================
+styling  the kira conatiner (box 5)
+================================================================*/
+.box5{
+    background: var(--White);
+}
+.box5 .profile h2, .box5 h3, .box5 p {
+    color: var(--Very-dark_blackish_blue);
+/*==============================================================
+responsive layout for laptop
+================================================================*/
+}
+@media screen and (min-width:992px) { 
+    /* .container{ display: none;}
+
+    } */
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .container{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: stretch;
+        align-items: stretch;
+    }
+    .box1 {
+        grid-column: 1/3;
+    }
+    .box2{
+        grid-column: 3/4;
+    }
+    .box3{
+        grid-column: 1/2;
+    }
+    .box4 {
+        grid-column:2/4;
+    }
+     .box5 {
+        grid-column:4/5 ;
+        grid-row: 1/3;
+    } 
+}
+/*==============================================================
+END
+================================================================*/
